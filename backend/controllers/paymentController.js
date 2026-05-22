@@ -1,5 +1,24 @@
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
+/*User
+ ↓
+Frontend
+ ↓
+Backend createOrder()
+ ↓
+Razorpay Order Created
+ ↓
+Frontend opens Checkout
+ ↓
+User Pays
+ ↓
+Razorpay sends payment details
+ ↓
+Backend verifyPayment()
+ ↓
+Payment Verified
+ ↓
+Save Order in DB*/
 
 const createOrder = async (req, res) => {
   try {
@@ -41,3 +60,4 @@ const verifyPayment = async (req, res) => {
 };
 
 module.exports = { createOrder, verifyPayment };
+

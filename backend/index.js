@@ -20,9 +20,9 @@ app.get('/', (req, res) => {
 
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/products', require('./routes/productRoutes.js'));
-app.use('/api/payments', require('./routes/paymentRoutes.js/index.js'));
+app.use('/api/payments', require('./routes/paymentRoutes.js'));
 app.use('/api/orders', require('./routes/orderRoutes'));
-// app.use('/api/analytics', require('./routes/analyticsRoutes'));
+app.use('/api/analytics', require('./routes/analyticsRoutes'));
 
 const PORT = process.env.PORT || 5000;
 
